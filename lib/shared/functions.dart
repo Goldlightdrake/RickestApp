@@ -30,6 +30,7 @@ Widget textWithStroke(
         text,
         textAlign: TextAlign.center,
         style: TextStyle(
+          decoration: TextDecoration.none,
           fontSize: fontSize,
           fontFamily: fontFamily,
           foreground: Paint()
@@ -40,7 +41,10 @@ Widget textWithStroke(
       ),
       Text(text,
           style: TextStyle(
-              fontFamily: fontFamily, fontSize: fontSize, color: textColor)),
+              decoration: TextDecoration.none,
+              fontFamily: fontFamily,
+              fontSize: fontSize,
+              color: textColor)),
     ],
   );
 }

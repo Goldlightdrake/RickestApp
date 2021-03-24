@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rickest_app/screens/home_screen/view/characters_list_page.dart';
+import 'package:rickest_app/screens/init_screen/init_screen.dart';
 import 'package:rickest_app/shared/theme.dart';
 
 import 'data/shared_preference/user_preference.dart';
@@ -25,7 +26,7 @@ class App extends StatelessWidget {
                     create: (context) => FavoriteCharactersCubit(),
                     child: MaterialApp(
                       title: 'RickestApp',
-                      home: CharactersListPage(),
+                      home: InitScreen(),
                       theme: ThemeProvider.of(context),
                       debugShowCheckedModeBanner: false,
                     ),
