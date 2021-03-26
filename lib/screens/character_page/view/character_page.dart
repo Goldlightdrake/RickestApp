@@ -141,7 +141,7 @@ class StatsElement extends StatelessWidget {
                 child: descriptionOfStat == "Status"
                     ? statusIcon(passedStat.toLowerCase())
                     : Text(
-                        passedStat == '' ? "Brak danych" : passedStat,
+                        passedStat == '' ? "No data" : passedStat,
                       ),
               ),
             ],

@@ -38,7 +38,8 @@ class CharactersListWidget extends StatelessWidget {
                     );
                   }
 
-                  if (state.showFavoriteCharacters) {
+                  if (state.showFavoriteCharacters ||
+                      state.showResultsFromSearching) {
                     return SliverList(
                       delegate: SliverChildBuilderDelegate((context, index) {
                         return CharactersListItem(
@@ -46,14 +47,7 @@ class CharactersListWidget extends StatelessWidget {
                       }, childCount: state.listOfCharacters.length),
                     );
                   }
-                  if (state.showResultsFromSearching) {
-                    return SliverList(
-                      delegate: SliverChildBuilderDelegate((context, index) {
-                        return CharactersListItem(
-                            character: state.listOfCharacters[index]);
-                      }, childCount: state.listOfCharacters.length),
-                    );
-                  }
+
                   return SliverList(
                     delegate: SliverChildBuilderDelegate((context, index) {
                       if (index >= state.listOfCharacters.length) {
